@@ -1,0 +1,24 @@
+- const title = 'about'
+doctype html
+html(lang="en")
+    head
+        link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+        include ../layouts/_head
+    body
+        include ../layouts/_header
+        h1 This is a page
+        .container
+            .slider.swiper-container
+                .swiper__left
+                .swiper__right
+                .slider__wrapper.swiper-wrapper
+                    //- each image in images
+                    //-     .slider__wrapper__slide.swiper-slide
+                    //-         img(src=image alt="")
+                    //-         img(src=image alt="") 
+                    //-         //- img(src="../docs/assets/img/lenses-3.svg" alt="") 
+
+        include ../layouts/_footer
+
+        script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+        script(src="assets/js/main.js")  

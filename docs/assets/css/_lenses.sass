@@ -1,0 +1,139 @@
+.lenses_container
+        width: 100%
+        height: 454px
+        background: white
+        padding: 20px 50px 68px 50px
+        position: fixed
+        top: 163px
+        z-index: 1
+        transform: translateY(-100vh)
+        transition: 300ms transform ease-out
+        &.toggle
+            transform: translateY(0)
+        &_wrapper
+            max-width: 1308px
+            width: 100%
+            min-height: 366px
+            height: 100%
+            margin: 0 auto
+
+            &_content
+                max-width: 1196px
+                width: 100%
+                min-height: 366px
+                height: 100%
+                display: grid
+                grid-template-columns: repeat(2, auto)
+                grid-gap: 122px
+                &_brands
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    .brands_heading
+                        position: relative
+                        &::after
+                            position: absolute
+                            content: ''
+                            background: $primary_color
+                            height: 1px
+                            max-width: 78px
+                            width: 100%
+                            // top: 0
+                            bottom: -16px
+                            left: 0
+                    &_list
+                        font-size: $primary_font_size - 2
+                        text-transform: capitalize
+                        font-family: $primary_font_family
+                        font-weight: $primary_font_weight - 2
+                        max-width: 78px
+                        width: 100%
+                        position: relative
+                        display: grid
+                        grid-gap: 10px
+                        &::after
+                            position: absolute
+                            content: ''
+                            max-width: 78px
+                            width: 100%
+                            height: 1px
+                            background: #F6F6F6
+                            left: 0
+                            bottom: -2px
+
+                        // min-height: 271px
+                        // height: 100%
+                        li
+                            // line-height: 24px
+                            a
+                                color: #323030
+                .lenses_list_item
+                    position: relative
+                    &::after
+                        position: absolute
+                        content: ''
+                        max-width: 309px
+                        width: 100%
+                        background: #F6F6F6
+                        height: 1px
+                        left: 0
+                        bottom: -4px
+                .expand
+                    font-size: $primary_font_size - 2
+                    font-family: $primary_font_family
+                    font-family: $primary_font_weight - 2
+                    a
+                        color: #909090
+                .content_heading
+                    font-size: $primary_font_size
+                    font-weight: $primary_font_weight
+                    font-family: $primary_font_family
+                    line-height: $primary_line_height
+                &_duration
+                    max-width: 916px
+                    width: 100%
+                    display: grid
+                    grid-template-columns: repeat(2, auto)
+                    // justify-content: space-between
+                    grid-gap: 298px
+                    ul
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        .expand
+                            display: flex
+                            justify-content: flex-end
+                        .duration_heading
+                            color: #C2C2C2
+                            position: relative
+                            &::after
+                                position: absolute
+                                content: ''
+                                max-width: 309px
+                                width: 100%
+                                height: 1px
+                                background: #D5D5D5
+                                left: 0
+                                bottom: -16px
+                    .lenses_list
+                        &_item
+                            &_link
+                                display: grid
+                                align-items: center
+                                grid-template-columns: repeat(2, auto)
+                                grid-gap: 10px
+                                &_text
+                                    display: flex
+                                    flex-direction: column
+                                    *:nth-child(1)
+                                        font-size: $primary_font_size
+                                        font-weight: $primary_font_weight
+                                        line-height: $primary_line_height
+                                        font-family: $primary_font_family
+                                        color: #323030
+                                    *:nth-child(2)
+                                        font-size: $primary_font_size - 2 
+                                        font-weight: $primary_font_weight - 200
+                                        line-height: $primary_line_height - 2
+                                        font-family: $secondary_font_family //FiraGo
+                                        color: #929292

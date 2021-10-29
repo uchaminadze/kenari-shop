@@ -1,0 +1,26 @@
+{
+    "pages": [
+        {
+            "title": "home",
+            "route": "index.html"
+        },
+        {
+            "title": "about",
+            "route": "about.html"
+        },
+        {
+            "title": "contact",
+            "route": "contact.html"
+        }
+    ],
+
+    "langs": ["ENG.", "GEO.", "RUS."],
+
+    "images": [
+        "assets/img/lenses.svg",
+        "assets/img/lenses2.svg",
+        "assets/img/lenses3.svg"
+    ]
+
+
+}

@@ -1,0 +1,113 @@
+header
+    nav.secondary_nav
+        ul.langs
+            li
+                a(href="#").active ENG.
+            li
+                a(href="#") GEO.
+            li
+                a(href="#") RUS.
+
+        img(src="assets/img/kenari-logo.svg" alt="")
+
+        ul.icons
+
+            li
+                include ../components/user
+            li.header_basket
+                span.header_basket_qty 4
+                include ../components/shop
+
+    .tablet_slide_menu_container
+        nav.tablet_slide_menu
+            ul.tablet_slide_menu_secondary
+                li
+                    a(href="#")  კონტაქტური ლინზები
+                        span 
+                            include ../docs/assets/img/slider-right.svg
+                li
+                    a(href="#") მზის სათვალეები
+                        span 
+                            include ../docs/assets/img/slider-right.svg
+                li
+                    a(href="#") ოპტიკური სათვალეები
+                        span 
+                            include ../docs/assets/img/slider-right.svg
+                li
+                    a(href="#") SALE
+                        span 
+                            include ../docs/assets/img/slider-right.svg
+
+
+            ul.tablet_slide_menu_primary
+                li
+                    a(href="index.html")  მთავარი
+                li
+                    a(href="production.html")  პროდუქცია
+                li
+                    a(href="about.html")  ჩვენ შესახებ
+                li
+                    a(href="delivery.html")  მიწოდების პირობები
+                li
+                    a(href="card.html")  სასაჩუქრე ბარათი
+                li
+                    a(href="blog.html")  ბლოგი
+                li
+                    a(href="faq.html")  FAQ
+                li
+                    a(href="rules.html")  წესები და პირობები
+                li
+                    a(href="contact.html")  კონტაქტი 
+
+
+
+    hr.navs_separator
+
+    nav.primary_nav
+        ul.primary_nav_categories
+            li.lenses
+                a(href="#")  კონტაქტური ლინზები
+            li.sun_glasses
+                a(href="#") მზის სათვალეები
+            li.optic_glasses
+                a(href="#") ოპტიკური სათვალეები
+            li.sale
+                a(href="#") SALE
+
+        ul.primary_nav_icons
+            li.search
+                a(href="#")
+                    include ../components/search 
+            span.icons_separator
+            li.burger_menu
+                a(href="#") მენიუ
+                    span.burger_bar
+                        span.bar_one
+                        span.bar_two
+                        span.bar_three 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- each page, index in pages
+//-     li
+//-         a(href=page.route, class=(page.title === title && 'active'))= page.title 

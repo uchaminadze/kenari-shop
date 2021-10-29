@@ -1,0 +1,298 @@
+@import abstracts/_colors
+@import _media_queries
+@import abstracts/_fonts
+
+header
+    background-color: $primary_color
+    position: fixed
+    z-index: 99
+    width: 100%
+    top: 0
+    .secondary_nav
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        min-height: 96px
+        height: 100%
+        padding: 0 50px 0 50px
+        max-width: 1408px
+        width: 100%
+        margin: 0 auto
+        @include medium()
+            min-height: 64px
+        @include small()
+            min-height: 68px
+        img
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+        .icons
+            @include medium()
+                display: none
+            display: flex
+            gap: 1.3rem
+            // margin-left: 3.5rem
+            .header_basket
+                display: inline-block
+                position: relative
+                width: 24px
+                height: 24px
+                &_qty
+                    position: absolute
+                    font-size: $primary_font_size - 6
+                    line-height: $primary_line_height - 7
+                    // font-family: Myriad GEO Mtavrulis
+                    top: 5px
+                    right: 7px
+                    color: $primary_color
+                    font-weight: $primary_font_weight
+                    font-family: $primary_font_family
+
+        .langs
+            @include medium()
+                display: none
+            display: grid
+            grid-gap: 22px
+            grid-template-columns: repeat(3, auto)
+            width: max-content
+            a
+                color: white
+                opacity: 0.3
+                font-size: $primary_font_size
+                font-weight: $primary_font_weight
+                font-family: $primary_font_family
+                line-height: $primary_line_height
+                text-transform: uppercase
+                &.active
+                    opacity: 1
+    .navs_separator
+        border: 1px solid white
+        opacity: 0.3
+        @include medium()
+            display: none
+    .primary_nav
+        @include medium()
+            display: none
+        display: flex
+        align-items: center
+        justify-content: space-between
+        min-height: 67px
+        height: 100%
+        padding: 0 50px 0 50px
+        max-width: 1408px
+        width: 100%
+        margin: 0 auto
+        // border: 1px solid black
+        &_categories
+            a
+                color: white
+                font-size: $primary_font_size
+                font-weight: $primary_font_weight
+                font-family: $primary_font_family
+                line-height: $primary_line_height
+            display: flex
+            justify-content: space-between
+            max-width: 677px
+            width: 100%
+            align-items: center
+        // border: 1px solid black
+        &_icons
+            display: flex
+            max-width: 154px
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            .search
+
+            .icons_separator
+                background: white
+                width: 32px
+                height: 1px
+                transform: rotate(90deg)
+                opacity: 0.4
+            .burger_menu
+                a
+                    display: grid
+                    align-items: center
+                    grid-template-columns: repeat(2, auto)
+                    width: max-content
+                    grid-gap: 6px
+                    font-size: $primary_font_size + 2
+                    line-height: $primary_line_height + 3
+                    font-weight: $primary_font_weight
+                    font-family: $primary_font_family
+                    color: white
+                    .burger_bar
+                        display: flex
+                        maxx-width: 18px
+                        width: 100%
+                        min-height: 12px
+                        height: 100%
+                        flex-direction: column
+                        justify-content: space-around
+                        position: relative
+                        
+                        span
+                            height: 3px
+                            width: 24px
+                            border-radius: 50px 
+                            background-color: white
+ 
+    .bar_transform .bar_one
+        position: absolute
+        transform: rotate(45deg)
+    .bar_transform .bar_two
+        opacity: 0
+    .bar_transform .bar_three
+        position: absolute
+        transform: rotate(-45deg)
+
+    .tablet_slide_menu_container
+        // display: none
+        width: 100%
+        background-color: white
+        padding: 20px 39px 216px 42px
+        @include small()
+            // min-height: 656px
+            padding: 16px 17px 76px 16px
+        @include medium()
+            position: fixed
+            top: 64px
+            right: 0
+            height: calc(100vh - 64px - 88px)
+            overflow: auto
+            // display: block
+            z-index: -1
+            transform: translateY(100vh)
+            transition: 300ms transform ease-out
+            &.toggle
+                transform: translateY(0)
+        @include aboveMedium()
+            display: none !important
+        .tablet_slide_menu
+            // max-width: 687px
+            width: 100%
+            height: 636px
+            display: grid
+            grid-gap: 43px
+
+            &_secondary
+                width: 100%
+                display: grid
+                grid-gap: 10px
+                li
+                    width: 100%
+                    height: 50px
+                    a
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        padding: 0 0 0 16px
+                        background: #F6F6F6
+                        width: 100%
+                        height: 50px
+                        font-size: $primary_font_size
+                        font-weight: $primary_font_weight
+                        line-height: $primary_line_height
+                        font-family: $primary_font_family
+                        color: #323030
+                        span
+                            max-width: 50px
+                            width: 100%
+                            min-height: 50px
+                            height: 100%
+                            background-color: $primary_color
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            *
+                                width: 9px
+                                height: 15px
+
+            &_primary
+                width: 165px
+                height: 366px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding: 0 0 0 14px
+                a
+                    color: #323030
+                    font-size: $primary_font_size - 1
+                    font-family: $primary_font_family
+                    line-height: $primary_line_height - 1
+                    font-weight: $primary_font_weight
+                        
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .show_flex_container
+        display: flex
+    .show_block_container
+        display: block
+                                        
+

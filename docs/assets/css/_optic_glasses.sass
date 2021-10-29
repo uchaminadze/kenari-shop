@@ -1,0 +1,179 @@
+.optic_glasses_container
+        background: white
+        height: 454px
+        width: 100%
+        padding: 25px 50px 72px 50px
+        position: fixed
+        top: 163px
+        transform: translateY(-100vh)
+        transition: 300ms transform ease-out
+        z-index: 1
+        &.toggle
+            transform: translateY(0)
+        &_wrapper
+            max-width: 1308px
+            width: 100%
+            min-height: 357px
+            height: 100%
+            margin: 0 auto
+            // background: green
+            &_content
+                // background: yellow
+                max-width: 1203px
+                width: 100%
+                display: flex
+                // grid-template-columns: repeat(2, auto)
+                // grid-gap: 133px
+                justify-content: space-between
+                &_filter
+                    display: grid
+                    max-width: 309px
+                    width: 100%
+                    grid-gap: 33px
+                    .expand
+                        display: flex
+                        justify-content: flex-end
+                        font-size: $primary_font_size - 2
+                        font-weight: $primary_font_weight
+                        line-height: $primary_line_height - 2
+                        font-family: $primary_font_family
+                        a
+                            color: #909090 
+                    .filter_heading
+                        font-size: $primary_font_size
+                        font-weight: $primary_font_weight
+                        line-height: $primary_line_height
+                        font-family: $primary_font_family
+                        color: #323030
+                    &_sex_list, &_brands_list
+                        li
+                            a
+                                font-family: $primary_font_family
+                                font-size: $primary_font_size - 2
+                                font-weight: $primary_font_weight
+                                line-height: $primary_line_height - 2
+                                color: #323030
+                    &_sex
+                        display: grid
+                        grid-gap: 33px
+                        &_heading
+                            .filter_heading
+                                position: relative
+                                // font-size: $primary_font_size
+                                // font-weight: $primary_font_weight
+                                // line-height: $primary_line_height
+                                // font-family: $primary_font_family
+                                // color: #323030
+                                &::after
+                                    position: absolute
+                                    content: ''
+                                    max-width: 309px
+                                    width: 100%
+                                    height: 1px
+                                    background: $primary_color
+                                    left: 0
+                                    top: 36px
+                        &_list
+                            display: grid
+                            grid-gap: 8px
+
+                    &_brands
+                        display: grid
+                        grid-gap: 33px
+                        &_heading
+                            .filter_heading
+                                position: relative 
+                                &::after
+                                    position: absolute
+                                    content: ''
+                                    max-width: 309px
+                                    width: 100%
+                                    height: 1px
+                                    background: $primary_color
+                                    left: 0
+                                    top: 36px
+                        &_list
+                            display: grid
+                            grid-gap: 10px
+                &_glasses
+                    display: grid
+                    grid-template-columns: repeat(2, auto)
+                    grid-gap: 128px
+                    // grid-gap: 128px
+                    ul 
+                        width: 313px
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        .glasses_heading
+                            font-size: $primary_font_size
+                            font-weight: $primary_font_weight
+                            font-family: $primary_font_family
+                            line-height: $primary_line_height
+                            position: relative
+                            &::after
+                                position: absolute
+                                content: ''
+                                max-width: 309px
+                                width: 100%
+                                height: 1px
+                                background: #D5D5D5
+                                left: 0
+                                top: 36px
+                                
+                        .sale_glasses_heading
+                            color: $primary_color
+                        .popular_glasses_heading
+                            color: #C2C2C2
+                        .expand
+                            display: flex
+                            justify-content: flex-end
+                            font-size: $primary_font_size - 2
+                            font-weight: $primary_font_weight
+                            line-height: $primary_line_height - 2
+                            font-family: $primary_font_family
+                            a
+                                color: #909090 
+                        .optic_glasses_list
+                            display: grid
+                            grid-gap: 8px
+                            &_item
+                                position: relative
+                                &::after
+                                    content: ''
+                                    position: absolute
+                                    max-width: 309px
+                                    width: 100%
+                                    height: 1px
+                                    top: 105%
+                                    background: #F6F6F6
+
+                                &_link
+                                    display: flex
+                                    // width: 309px
+                                    // justify-content: space-between
+
+                                    &_text
+                                        display: flex
+                                        flex-direction: column
+                                        justify-content: center
+                                        width: 100%
+                                        // width: 100%
+                                        *:nth-child(1)
+                                            font-size: $primary_font_size
+                                            font-weight: $primary_font_weight
+                                            line-height: $primary_line_height
+                                            font-family: $primary_font_family
+                                            color: #323030
+                                        *:nth-child(2)
+                                            font-size: $primary_font_size - 2 
+                                            font-weight: $primary_font_weight - 200
+                                            line-height: $primary_line_height - 2
+                                            font-family: $secondary_font_family //FiraGo
+                                            color: #929292
+                                    .rayban_img
+                                        position: relative
+                                        z-index: 1
+                                    .rayban_logo
+                                        position: absolute
+                                        z-index: 2

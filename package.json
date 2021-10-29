@@ -1,0 +1,11 @@
+{
+  "name": "kenari-website",
+  "version": "1.0.0",
+  "description": "kenari website",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug src --out ./docs --watch -P -O options.json"
+  },
+  "author": "ucha",
+  "license": "ISC"
+}

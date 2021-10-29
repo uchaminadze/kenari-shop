@@ -1,0 +1,32 @@
+.slide_menu
+        background-color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 66px
+        position: fixed
+        top: 163px
+        width: 100%
+        transform: translateY(-100vh)
+        z-index: 1
+        transition: 300ms transform ease-out
+        &.toggle
+            transform: translateY(0)
+        @include medium()
+            display: none !important
+        &_wrapper
+            padding: 0 50px 0 50px
+            max-width: 1408px
+            width: 100%
+            ul
+                display: flex
+                justify-content: space-between
+                max-width: 1223px
+                width: 100%
+                align-items: center
+                a
+                    color: #323030
+                    line-height: $primary_line_height - 1
+                    font-weight: $primary_font_weight
+                    font-size: $primary_font_size - 1
+                    font-family: $primary_font_family

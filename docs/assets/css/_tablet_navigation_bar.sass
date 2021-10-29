@@ -1,0 +1,65 @@
+// @import abstracts/_colors
+// @import abstracts/_fonts
+// @import _media_queries
+    
+    
+.tablet_navigation_bar
+    width: 100%
+    height: 88px
+    align-items: center 
+    justify-content: space-between
+    display: none
+    background-color: $primary_color
+    position: fixed
+    bottom: 0
+    right: 0
+    z-index: 100
+    @include medium()
+        display: flex
+    ul
+        width: 100%
+        margin: 0 40px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .header_basket
+            display: inline-block
+            position: relative
+            width: 24px
+            height: 24px
+            &_qty
+                position: absolute
+                font-size: $primary_font_size - 6
+                line-height: $primary_line_height - 7
+                top: 5px
+                right: 7px
+                color: $primary_color
+                font-weight: $primary_font_weight
+                font-family: $primary_font_family
+        li
+            a
+                display: flex
+                align-items: center
+                .tablet_burger_bar
+                    display: flex
+                    // max-width: 18px
+                    width: 100%
+                    min-height: 18px
+                    height: 100%
+                    flex-direction: column
+                    justify-content: space-around
+                    position: relative
+                    
+                    span
+                        height: 3px
+                        width: 24px
+                        border-radius: 50px 
+                        background-color: white
+    .bar_transform .bar_one
+        position: absolute
+        transform: rotate(45deg)
+    .bar_transform .bar_two
+        opacity: 0
+    .bar_transform .bar_three
+        position: absolute
+        transform: rotate(-45deg)

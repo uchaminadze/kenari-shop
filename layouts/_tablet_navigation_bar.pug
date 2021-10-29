@@ -1,0 +1,24 @@
+nav.tablet_navigation_bar
+    ul
+        li.tablet_search
+            a(href="#")
+                include ../components/search
+
+        li
+            a(href="index.html")
+                include ../components/home 
+
+        li.tablet_burger_menu
+            a(href="#")
+                span.tablet_burger_bar
+                    span.bar_one
+                    span.bar_two
+                    span.bar_three
+
+        li.header_basket
+            span.header_basket_qty 4
+            include ../components/shop
+
+        li
+            a(href="user.html")
+                include ../components/user

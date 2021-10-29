@@ -1,0 +1,85 @@
+@import _media_queries
+@import abstracts/_fonts
+
+.white_footer_wrapper
+    width: 100%
+    background-color:  #FAFAFA
+    min-height: 91px
+    height: 100%
+    display: flex
+    align-items: center
+    @include medium()
+        padding: 29.4px 0 32.1px 0
+    .white_footer
+        padding: 0 50px 0 50px
+        max-width: 989px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        position: relative
+        justify-content: space-between
+        .address
+            position: absolute
+            right: 50%
+            transform: translateX(50%)
+            @include medium()
+                position: inherit
+        @include medium()
+            flex-direction: column
+            grid-gap: 32.5px
+
+        // grid-template-columns: repeat(3, auto)
+        // width: max-content
+        // grid-gap: 153.3px
+        p
+            display: grid
+            font-size: $primary_font_size
+            font-weight: $primary_font_weight
+            grid-template-columns: repeat(2, auto)
+            align-items: center
+            justify-content: center
+            grid-gap: 10.5px
+
+.black_footer_wrapper
+    width: 100%
+    background-color: black
+    min-height: 160px
+    height: 100%
+    display: flex
+    align-items: center
+    .black_footer
+        padding: 0 50px 0 50px
+        max-width: 1412px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        align-items: center
+        position: relative
+        justify-content: space-between
+        @include medium()
+            flex-direction: column
+            grid-gap: 61px
+            padding: 46.8px 0 74px 0
+        .website_copyright
+            color: white
+            font-size: $primary_font_size
+            font-weight: $primary_font_weight
+            opacity: 0.5
+            .smart_web
+                text-transform: uppercase
+                color: #DB5038
+        p
+            color: white
+            display: grid
+            grid-template-columns: repeat(3, auto)
+            align-items: center
+        .social_icons
+            grid-gap: 32px
+        .payment_icons
+            position: absolute
+            right: 50%
+            transform: translateX(50%)
+            grid-gap: 24.4px
+            @include medium()
+                position: static
+                transform: translateX(0%)
