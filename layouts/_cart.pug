@@ -3,13 +3,78 @@
         .pop_up_shopping_cart_container_wrapper
             .pop_up_shopping_cart_container_wrapper_qty
                 p.pop_up_heading არჩეული პროდუქცია
-                    span.pop_up_qty (4)
+                    span.parenthesis (
+                    span.pop_up_qty 4
+                    span.parenthesis )
 
 
-                include ../components/close
+                span.pop_up_cart_close
+                    include ../components/close
 
             .pop_up_shopping_cart_container_wrapper_list
+                li 
+                    a(href="#") 
+                        span.pop_up_shopping_cart_container_wrapper_list_item_img_group 
+                            span.pop_up_shopping_cart_container_wrapper_list_item_img_group_logo
+                                include ../components/rayban-logo
+                            img.pop_up_shopping_cart_container_wrapper_list_item_img_group_img(src="../docs/assets/img/rayban-glasses.svg" alt="")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_text
+                            span Ray-Ban Clubmaster Metal
+                            span RB3716 | 186/R5
+                        span.pop_up_shopping_cart_container_wrapper_list_item_price
+                            span 800.00
+                            span 
+                                include ../components/gel
+                li 
+                    a(href="#")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_img_group 
+                            span.pop_up_shopping_cart_container_wrapper_list_item_img_group_logo
+                                include ../components/rayban-logo
+                            img.pop_up_shopping_cart_container_wrapper_list_item_img_group_img(src="../docs/assets/img/rayban-glasses.svg" alt="")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_text
+                            span Ray-Ban Clubmaster Metal
+                            span RB3716 | 186/R5
+                        span.pop_up_shopping_cart_container_wrapper_list_item_price
+                            span 800.00
+                            span 
+                                include ../components/gel
+                li 
+                    a(href="#")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_img_group 
+                            span.pop_up_shopping_cart_container_wrapper_list_item_img_group_logo
+                                include ../components/rayban-logo
+                            img.pop_up_shopping_cart_container_wrapper_list_item_img_group_img(src="../docs/assets/img/rayban-glasses.svg" alt="")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_text
+                            span Ray-Ban Clubmaster Metal
+                            span RB3716 | 186/R5
+                        span.pop_up_shopping_cart_container_wrapper_list_item_price
+                            span 800.00
+                            span 
+                                include ../components/gel
+                li 
+                    a(href="#")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_img_group 
+                            span.pop_up_shopping_cart_container_wrapper_list_item_img_group_logo
+                                include ../components/rayban-logo
+                            img.pop_up_shopping_cart_container_wrapper_list_item_img_group_img(src="../docs/assets/img/rayban-glasses.svg" alt="")
+                        span.pop_up_shopping_cart_container_wrapper_list_item_text
+                            span Ray-Ban Clubmaster Metal
+                            span RB3716 | 186/R5
+                        span.pop_up_shopping_cart_container_wrapper_list_item_price
+                            span 800.00
+                            span 
+                                include ../components/gel
+
+
+            .pop_up_shopping_cart_container_wrapper_sum
+                span.pop_up_shopping_cart_container_wrapper_sum_text ჯამი: 
+                span.pop_up_shopping_cart_container_wrapper_sum_price
+                    span 3200.00 
+                    span 
+                        include ../components/gel
 
 
             .pop_up_shopping_cart_container_wrapper_buttons
+                button კალათის გასუფთავება
+                button შეკვეთის გაფორმება 
 

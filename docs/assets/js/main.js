@@ -16,6 +16,7 @@
 //     },
 // })
 
+const body = document.querySelector("body");
 const slide_menu = document.querySelector(".slide_menu");
 const burger_menu = document.querySelector(".burger_menu a");
 const burger_bar = document.querySelector(".burger_bar");
@@ -32,21 +33,19 @@ const sun_glasses = document.querySelector(".sun_glasses")
 const sun_glasses_container = document.querySelector(".sun_glasses_container")
 const optic_glasses = document.querySelector(".optic_glasses")
 const optic_glasses_container = document.querySelector(".optic_glasses_container")
-const body = document.querySelector("body");
+const cart_icon = document.querySelector(".header_basket")
+const cart_container = document.querySelector(".pop_up_shopping_cart")
+const cart_menu = document.querySelector(".pop_up_shopping_cart_container_wrapper")
+const cart_close = document.querySelector(".pop_up_cart_close")
+const tablet_cart_icon = document.querySelector(".tablet_header_basket")
 
 const searchOnSite = (e) =>{
     e.preventDefault()
-    if (search.contains(e.target)){
+    if (search.contains(e.target) || tablet_search.contains(e.target)){
         search_on_site.classList.toggle("toggle")
         search_input.focus()
         search_input.value = ""
-    }else if(tablet_search.contains(e.target)){
-        search_on_site.classList.toggle("toggle")
-        search_input.focus()
-        search_input.value = ""
-    }else if(search_on_site.contains(e.target)){
-        search_on_site.classList.add("toggle")
-    }else{
+    }else if(!search_on_site.contains(e.target)){
         search_on_site.classList.remove("toggle")
     }
 }
@@ -56,10 +55,7 @@ const slideMenu = (e) => {
     if (burger_menu.contains(e.target)){
         slide_menu.classList.toggle("toggle")
         burger_bar.classList.toggle("bar_transform")
-  
-    }else if(slide_menu.contains(e.target)){
-        slide_menu.classList.add("toggle")
-    }else{
+    }else if(!slide_menu.contains(e.target)){
         slide_menu.classList.remove("toggle")
         burger_bar.classList.remove("bar_transform")
     }
@@ -73,9 +69,7 @@ const tabletSlideMenu = (e) =>{
         tablet_slide_menu_container.classList.toggle("toggle")
         tablet_burger_bar.classList.toggle("bar_transform")
         body.classList.toggle("no_scroll")
-    }else if(tablet_slide_menu_container.contains(e.target)){
-        tablet_slide_menu_container.classList.add("toggle")
-    }else{
+    }else if(!tablet_slide_menu_container.contains(e.target)){
         tablet_slide_menu_container.classList.remove("toggle")
         tablet_burger_bar.classList.remove("bar_transform")
         body.classList.remove("no_scroll")
@@ -84,14 +78,11 @@ const tabletSlideMenu = (e) =>{
 
 
 
-
 const lensesMenu = (e) =>{
     e.preventDefault()
     if(lenses.contains(e.target)){
         lenses_container.classList.toggle("toggle")
-    }else if(lenses_container.contains(e.target)){
-        lenses_container.classList.add("toggle")
-    }else{
+    }else if(!lenses_container.contains(e.target)){
         lenses_container.classList.remove("toggle")
     }
 }
@@ -101,9 +92,7 @@ const sunGlassesMenu = (e) =>{
     e.preventDefault()
     if(sun_glasses.contains(e.target)){
         sun_glasses_container.classList.toggle("toggle")
-    }else if(sun_glasses_container.contains(e.target)){
-        sun_glasses_container.classList.add("toggle")
-    }else{
+    }else if(!sun_glasses_container.contains(e.target)){
         sun_glasses_container.classList.remove("toggle")
     }
 }
@@ -113,10 +102,18 @@ const opticGlassesMenu = (e) =>{
     e.preventDefault()
     if(optic_glasses.contains(e.target)){
         optic_glasses_container.classList.toggle("toggle")
-    }else if(optic_glasses_container.contains(e.target)){
-        optic_glasses_container.classList.add("toggle")
-    }else{
+    }else if(!optic_glasses_container.contains(e.target)){
         optic_glasses_container.classList.remove("toggle")
+    }
+}
+
+
+const cartMenu = (e) =>{
+    e.preventDefault()
+    if(cart_icon.contains(e.target) || tablet_cart_icon.contains(e.target)){
+        cart_container.classList.toggle("toggle")
+    }else if(!cart_menu.contains(e.target) || cart_close.contains(e.target)){
+        cart_container.classList.remove("toggle")
     }
 }
 
@@ -129,4 +126,5 @@ window.addEventListener('click', (e) =>{
     lensesMenu(e)
     sunGlassesMenu(e)
     opticGlassesMenu(e)
+    cartMenu(e)
   });

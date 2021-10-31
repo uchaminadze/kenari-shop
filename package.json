@@ -7,5 +7,8 @@
     "pug": "pug src --out ./docs --watch -P -O options.json"
   },
   "author": "ucha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }
