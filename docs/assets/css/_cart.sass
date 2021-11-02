@@ -28,10 +28,11 @@
         &_wrapper
             width: 642px
             background: white
-            padding: 8.5px 48px 48px 48px 
+            padding: 8.5px calc( calc( 14.7% / 2 ) - 48px) 48px 
             @include medium()
                 width: 100vw
                 height: calc( 100vh - 64px - 88px )
+                padding: 8.5px 16px 21px 16px 
             &_qty
                 display: flex
                 align-items: center
@@ -68,23 +69,29 @@
                     background: $primary_color
             &_list
                 overflow-y: auto
-                display: flex
-                flex-direction: column
+                position: relative
+                display: grid
+                grid-template-rows: repeat(4, 114px)
                 height: calc( 55vh - 200px )
                 margin-top: 24px
                 grid-gap: 48px
-                @include medium()
-                    // height: calc( 100vh - 64px - 88px )
-                    height: calc( 100% - 199px )
+                @include small()
+                    grid-template-rows: repeat(4, 67px)
+                    
+
+                @include medium() 
+                    height: calc( 100% - 221px )
+                    // height: auto
                 li
                     position: relative
                     a
-                        display: grid
-                        grid-template-columns: repeat(3, auto)
+                        display: flex
                         align-items: center
-                        justify-content: flex-start
-                        grid-gap: 24px
-                    &::after
+                        height: 100%
+                        padding-right: 62px
+                        @include medium()
+                            padding-right: 0
+                    &:not(:last-child)::after
                         position: absolute
                         content: ''
                         width: 100%
@@ -92,45 +99,106 @@
                         background: #F6F6F6
                         // top: 24px
                         bottom: -24px
-                &_item_price
-                    display: grid
-                    align-items: center
-                    margin-left: 89px
-                    grid-template-columns: repeat(2, auto)
-                    grid-gap: 5px
-                    span
-                        &:nth-child(1)
-                            font-family: $secondary_font_family
-                            font-size: $primary_font_size
-                            font-weight: $primary_font_weight - 200
-                            line-height: $primary_line_height
-                            color: #323030
-                        &:nth-child(2)
-                            display: grid
                         
                 &_item_text
-                    display: grid
-                    span
-                        &:nth-child(1)
-                            color: #323030
-                            font-size: $primary_font_size
-                            font-weight: $primary_font_weight
-                            font-family: $primary_font_family
-                            line-height: $primary_line_height
-                        &:nth-child(2)
-                            color: #929292
-                            font-size: $primary_font_size - 2
-                            font-weight: $primary_font_weight - 200   
-                            font-family: $secondary_font_family
-                            line-height: $primary_line_height - 2
+                    display: flex
+                    justify-content: space-between
+                    width: 100%
+                    margin-left: 24px
+                    @include small()
+                        width: 50%
+                        margin-left: 0
+                    @include small()
+                        flex-direction: column
+                        margin-left: 0
+                    &_title
+                        display: grid
+                        span
+                            &:nth-child(1)
+                                color: #323030
+                                font-size: $primary_font_size
+                                font-weight: $primary_font_weight
+                                font-family: $primary_font_family
+                                line-height: $primary_line_height
+                                @include small()
+                                    font-size: $primary_font_size - 2
+                                    font-weight: $primary_font_weight
+                                    font-family: $primary_font_family
+                                    line-height: $primary_line_height - 2
+
+                            &:nth-child(2)
+                                color: #929292
+                                font-size: $primary_font_size - 2
+                                font-weight: $primary_font_weight - 200   
+                                font-family: $secondary_font_family
+                                line-height: $primary_line_height - 2
+                                @include small()
+                                    font-size: $primary_font_size - 4
+                                    font-weight: $primary_font_weight - 200   
+                                    font-family: $secondary_font_family
+                                    line-height: $primary_line_height - 5
+
+                    &_price
+                        display: grid
+                        align-items: center
+                        grid-template-columns: repeat(2, auto)
+                        grid-gap: 5px
+                        @include medium()
+                            margin: 0
+                            left: 90px
+                            top: 80px
+
+                        @include small()
+                            justify-content: flex-start
+                        span
+                            &:nth-child(1)
+                                font-family: $secondary_font_family
+                                font-size: $primary_font_size
+                                font-weight: $primary_font_weight - 200
+                                line-height: $primary_line_height
+                                color: #323030
+                            &:nth-child(2)
+                                display: grid
                 &_item_img_group
                     position: relative
+                    display: flex
+                    width: 120px
+                    height: 114px
                     &_img
-                        width: 120px
-                        height: 114px
+                        width: 100%
+                        height: 100%
+                    @include small()
+                        width: 68px
+                        height: 65px
                     &_logo
                         position: absolute
                         z-index: 1
+                        img
+                            width: 50px
+                            height: 24px
+                            @include small()
+                                width: 35px
+                                height: 17px
+
+                
+                &_item_counter
+                    display: flex
+                    align-items: center
+                    display: none
+                    float: right
+                    @include small()
+                        display: flex
+                    &_minus
+                        margin-right: 11px
+                    &_plus
+                        margin-left: 11px
+                    &_input
+                        width: 44px
+                        height: 32px
+                        input
+                            width: 100%
+                            height: 100%
+                            text-align: center
 
             
             &_sum
@@ -140,6 +208,8 @@
                 grid-gap: 8px
                 justify-content: flex-end
                 align-items: center
+                @include small()
+                    display: none
                 &_text
                     color: #A6A6A6
                     font-size: $primary_font_size
@@ -168,10 +238,16 @@
             &_buttons
                 margin-top: 32px
                 display: grid
-                grid-template-columns: repeat(2, auto)
+                grid-template-columns: repeat(2, 1fr)
                 grid-gap: 16px
+
+                @include small()
+                   grid-template-columns: repeat(1, 1fr)
+                   grid-gap: 10px
+
                 button
                     height: 50px
+                    width: 100%
                     color: white
                     font-size: $primary_font_size
                     font-weight: $primary_font_weight  
@@ -181,10 +257,14 @@
                     &:nth-child(1)
                         border: #A8A8A8
                         background: #A8A8A8
+                        @include small()
+                            order: 2
                         
                     &:nth-child(2)
                         border: $primary_color
                         background: $primary_color
+                        @include small()
+                            order: 1
 
 
             
