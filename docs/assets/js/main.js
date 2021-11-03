@@ -16,7 +16,7 @@
 //     },
 // })
 
-const body = document.querySelector("body");
+const body = document.body
 const slide_menu = document.querySelector(".slide_menu");
 const burger_menu = document.querySelector(".burger_menu a");
 const burger_bar = document.querySelector(".burger_bar");
@@ -37,7 +37,14 @@ const cart_icon = document.querySelector(".header_basket")
 const cart_container = document.querySelector(".pop_up_shopping_cart")
 const cart_menu = document.querySelector(".pop_up_shopping_cart_container_wrapper")
 const cart_close = document.querySelector(".pop_up_cart_close")
+const cart_list = document.querySelector(".pop_up_shopping_cart_container_wrapper_list")
 const tablet_cart_icon = document.querySelector(".tablet_header_basket")
+const plus_button = document.querySelector(".pop_up_shopping_cart_container_wrapper_list_item_counter_plus svg")
+const minus_button = document.querySelector(".pop_up_shopping_cart_container_wrapper_list_item_counter_minus svg")
+const counter_input = document.querySelector(".pop_up_shopping_cart_container_wrapper_list_item_counter_input input")
+const plus_button_2 = document.querySelector(".plus_2 svg")
+const minus_button_2 = document.querySelector(".minus_2 svg")
+const counter_input_2 = document.querySelector(".input_2 input")
 
 const searchOnSite = (e) =>{
     e.preventDefault()
@@ -110,10 +117,36 @@ const opticGlassesMenu = (e) =>{
 
 const cartMenu = (e) =>{
     e.preventDefault()
-    if(cart_icon.contains(e.target) || tablet_cart_icon.contains(e.target)){
+    if(cart_icon.contains(e.target)){
+        cart_container.classList.toggle("toggle")
+    }else if(tablet_cart_icon.contains(e.target)){
         cart_container.classList.toggle("toggle")
     }else if(!cart_menu.contains(e.target) || cart_close.contains(e.target)){
         cart_container.classList.remove("toggle")
+    }
+}
+
+
+const qtyCounter = (e) =>{
+    let tmp;
+    for(let i = 0; i < cart_list.children.length; i++){
+        tmp = cart_list.children[i].children[0].children[2].children
+        const minus_item = tmp[0]
+        const item_qty = tmp[1].children[0]
+        const plus_item = tmp[2]
+
+    if(plus_item.contains(e.target)){
+        item_qty.value++
+    }else if(minus_item.contains(e.target)){
+        item_qty.value--
+    }
+    
+    if(item_qty.value == 1){
+        minus_item.classList.add("disabled")
+    }else if(item_qty.value > 1){
+        minus_item.classList.remove("disabled")
+    }
+
     }
 }
 
@@ -127,4 +160,6 @@ window.addEventListener('click', (e) =>{
     sunGlassesMenu(e)
     opticGlassesMenu(e)
     cartMenu(e)
+    qtyCounter(e)
   });
+
