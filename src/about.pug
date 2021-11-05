@@ -12,11 +12,11 @@ html(lang="en")
                 .swiper__left
                 .swiper__right
                 .slider__wrapper.swiper-wrapper
-                    //- each image in images
-                    //-     .slider__wrapper__slide.swiper-slide
-                    //-         img(src=image alt="")
-                    //-         img(src=image alt="") 
-                    //-         //- img(src="../docs/assets/img/lenses-3.svg" alt="") 
+                    each image in images
+                        .slider__wrapper__slide.swiper-slide
+                            img(src=image alt="")
+                            //- img(src=image alt="") 
+                            //- img(src="../docs/assets/img/lenses-3.svg" alt="") 
 
         include ../layouts/_footer
 

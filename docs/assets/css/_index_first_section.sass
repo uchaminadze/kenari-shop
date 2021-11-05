@@ -1,12 +1,208 @@
-.first_section
-    // position: relative
+@import abstracts/_colors
+@import abstracts/_fonts
+@import _media_queries
+
+
+.container
     width: 100%
-    height: 864px
-    z-index: -3
-    .first_section_container
-        background-image: url("../img/background-img-1.jpg")
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
+    margin: 0 auto
+    overflow: hidden
+    // margin-top: 263px
+    // position: relative
+    .slider
         width: 100%
-        height: 864px
+        overflow: hidden
+        margin: 0 auto
+        height: 92vh
+        position: relative
+        @include medium()
+            height: 89vh
+        @include small()
+            height: 81vh
+        &__wrapper
+            font-size: 35px
+            &__slide
+                background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../img/background-img-1.jpg)
+                // min-height: 656px
+                // height: 100%
+                opacity: 1
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                object-fit: cover
+                position: relative
+                .overlay
+                    position: absolute
+                    z-index: 3
+                    top: 50%
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    transform: translateY(-50%)
+                    width: 1408px
+                    padding: 0 0 0 50px
+                    @include medium()
+                        width: 100%
+                        height: 100%
+                        padding: 0
+                    &__text
+                        display: grid
+                        grid-gap: 30px
+                        max-width: 420px
+                        color: white
+                        @include medium()
+                            margin: 0 auto
+                            display: block
+                            height: 100%
+                        @include small()
+                            padding: 0 60px
+                        &__heading
+                            font-size: $primary_font_size + 32
+                            font-family: $primary_font_family
+                            font-weight: $primary_font_weight
+                            line-height: $primary_line_height + 43
+                            position: relative
+                            @include medium()
+                                top: 100px
+                                text-align: center
+                            @include small()
+                                top: 44px
+                                font-size: $primary_font_size + 12
+                                font-family: $primary_font_family
+                                font-weight: $primary_font_weight 
+                                line-height: $primary_line_height + 16
+
+                            &::after
+                                position: absolute
+                                content: ''
+                                width: 33%
+                                height: 2px
+                                background: $primary_color
+                                left: 0
+                                top: 104%
+                                @include medium()
+                                    left: 50%
+                                    transform: translateX(-50%)
+                                    top: 90px
+                                @include small()
+                                    top: 50px
+                                    width: 53%
+                        
+                        &__para
+                            font-family: $tertiary_font_family
+                            font-size: $primary_font_size
+                            line-height: $primary_line_height + 1
+                            font-weight: $primary_font_weight
+                            width: 90%
+                            @include medium()
+                                position: absolute
+                                top: 266px
+                                left: 40%
+                                transform: translateX(-50%)
+                                width: 450px
+                                text-align: center
+                            @include small()
+                                top: 110px
+                                font-family: $tertiary_font_family
+                                font-size: $primary_font_size - 4
+                                line-height: $primary_line_height + 1
+                                font-weight: $primary_font_weight
+                                width: 254px
+                                left: 50%
+                                
+
+                        &__button
+                            margin-top: 4px
+                            width: 179px
+                            height: 51px
+                            background: $primary_color
+                            border: 1px solid $primary_color
+                            color: white
+                            font-size: $primary_font_size
+                            font-family: $primary_font_family
+                            font-weight: $primary_font_weight
+                            line-height: $primary_line_height
+                            @include medium()
+                                margin: 0 auto
+                                position: absolute
+                                bottom: 100px
+                                left: 0
+                                right: 0
+
+
+
+        .swiper-pagination
+            bottom: 29px
+            height: 13px
+            @include medium()
+                bottom: 21px
+            @include small()
+                bottom: 44px
+            &::after
+                position: absolute
+                content: ""
+                width: 50%
+                right: -98px
+                height: 2px
+                background: $primary_color
+                top: 50%
+                transform: translateY(-50%)
+                @include small()
+                    display: none
+            &::before
+                position: absolute
+                content: ""
+                width: 50%
+                height: 2px
+                background: $primary_color
+                left: -98px
+                top: 50%
+                transform: translateY(-50%)
+                @include small()
+                    display: none
+            &-bullet
+                outline: 1px solid white
+                outline-offset: 3px
+                margin-right: 16px
+                width: 13px
+                height: 100%
+                // @include medium()
+                //     width: 11px
+                //     height: 80%
+
+                &:nth-child(5)
+                    margin-right: 0       
+            &-bullet-active
+                background: $primary_color
+
+        .swiper__arrow
+            position: absolute
+            top: 50%
+            z-index: 3
+            right: 18%
+            transform: translateY(-50%)
+            width: 80px
+            // padding: 0 50px
+            height: 40px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @include medium()
+                display: none
+            &__left,
+            &__right
+                cursor: pointer
+                &.disabled
+                    opacity: 0.3
+                &::after
+                    content: url(../img/slider-right.svg)
+                    display: inline-block
+                    width: 10px
+                    height: 20px
+            &__left
+                // right: 25%
+                opacity: .2
+                &::after
+                    transform: scaleX(-1)
+            &__right
+                // right: 20%

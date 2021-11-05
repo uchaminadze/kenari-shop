@@ -1,21 +1,3 @@
-// const imageSwiper = new Swiper(".slider", {
-//     slidesPerView: 1,
-//     spaceBetween: 10,
-//     navigation: {
-//         nextEl: '.swiper__right',
-//         prevEl: '.swiper__left',
-//         disabledClass: "disabled"
-//     },
-//     loop: true,
-//     autoplay: {
-//         delay: 2000
-//     },
-//     effect: 'cube',
-//     cubeEffect: {
-//       slideShadows: false,
-//     },
-// })
-
 const body = document.body
 const slide_menu = document.querySelector(".slide_menu");
 const burger_menu = document.querySelector(".burger_menu a");
@@ -82,6 +64,8 @@ const tabletSlideMenu = (e) =>{
         body.classList.remove("no_scroll")
     }
 }
+
+
 
 
 
@@ -162,4 +146,3 @@ window.addEventListener('click', (e) =>{
     cartMenu(e)
     qtyCounter(e)
   });
-
