@@ -1,0 +1,205 @@
+@import ../abstracts/_colors
+@import ../abstracts/_fonts
+@import ../_media_queries
+
+    
+.second__container
+    width: 100%
+    padding: 133px 0 140px 0
+    background:#F6F6F6
+    @include medium()
+        padding: 53px 0 64px 0
+    @include small()
+        padding: 43px 0 64px 0
+    &__wrapper
+        max-width: 1408px
+        width: 100%
+        padding: 0 50px
+        margin: 0 auto
+        @include medium()
+            padding: 0
+        &__category
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            @include medium()
+                flex-direction: column
+                padding: 0 40px
+            @include small()
+                padding: 0 0 0 40px
+            &__heading
+                font-family: $quaternary_font_family
+                font-size: $primary_font_size + 12
+                font-weight: $primary_font_weight + 200
+                line-height: $primary_line_height + 16
+            .category__list__wrapper
+                @include small()
+                    overflow-x: scroll
+                    max-width: 503px
+                    height: 50px
+                    width: 100%
+            &__list
+                display: grid
+                grid-template-columns: repeat(3, auto)
+                grid-gap: 19px
+                position: relative
+
+                a
+                    font-family: $primary_font_family
+                    font-size: $primary_font_size
+                    font-weight: $primary_font_weight
+                    line-height: $primary_line_height
+                    color: #000
+                    opacity: .2
+                    position: relative
+                    white-space: nowrap
+                    &.active
+                        opacity: 1
+                        
+                .active__line
+                    position: absolute
+                    width: 0
+                    height: 2px
+                    background: $primary_color
+                    left: 0
+                    bottom: -8px
+                    transition: .5s
+                            
+                                    
+                                
+
+        .swiper-container
+            position: relative
+            @include medium()
+                padding: 0 0 0 40px
+            .swiper
+                width: 100%
+                margin: 106px 0 46px 0
+                position: unset
+                @include medium()
+                    margin: 50px 0 38px 0
+                @include small()
+                    margin: 28px 0 0 0
+                &__wrapper
+                    width: 100%
+                    &__slide
+                        padding: 20px 20px 0px 20px
+                        max-width: 309px
+                        background: white
+                        &__img__group
+                            position: relative
+                            img
+                                position: relative
+                                max-width: 100%
+                                height: auto
+                                z-index: 1
+                            &__svg
+                                position: absolute
+                                // display: grid
+                                // grid-template-columns: repeat(2, auto)
+                                // grid-gap: 8px
+                                z-index: 2
+                            &::after
+                                position: absolute
+                                content: ''
+                                width: 49px
+                                height: 1px
+                                background: $primary_color
+                                left: 0
+                                right: 0
+                                bottom: -4px
+                                margin: 0 auto
+                        &__text
+                            display: grid
+                            padding: 14px 0 35px 0
+                            &__title
+                                width: 100%
+                                text-align: center
+                                font-size: $primary_font_size
+                                font-weight: $primary_font_weight
+                                line-height: $primary_line_height
+                                font-family: $primary_font_family
+                                color: #999999
+                            &__price
+                                display: grid
+                                grid-template-columns: repeat(2, auto)
+                                grid-gap: 4px
+                                justify-content: center
+                                align-items: center
+                                padding: 11px 0 0 0
+                                span
+                                    &:nth-child(3)
+                                        display: none
+
+                                    &:nth-child(1)
+                                        color: #323030
+                                        font-family: $secondary_font_family
+                                        font-size: $primary_font_size + 4
+                                        line-height: $primary_line_height + 6
+                                        font-weight: $primary_font_weight + 200
+                                    
+                                
+            .slider__arrow
+                position: absolute
+                &__left,
+                &__right
+                    cursor: pointer
+                    @include medium()
+                        display: none
+                &__left
+                    position: absolute
+                    opacity: .2
+                    top: 50%
+                    transform: translateY(-50%) rotate(180deg)
+                    left: -38px
+                &__right
+                    position: absolute
+                    right: -38px
+                    top: 50%    
+                    transform: translateY(-50%)
+
+     
+
+
+
+
+
+
+        &__see__more
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            @include small()
+                flex-direction: column
+            @include medium()
+                padding: 0 40px
+            &__button
+                padding: 16px 32px
+                background: $primary_color
+                border: $primary_color
+                color: white
+                font-family: $primary_font_family
+                font-size: $primary_font_size
+                font-weight: $primary_font_weight
+                line-height: $primary_line_height
+                @include small()
+                    order: 2
+            .swiper-pagination
+                position: relative
+                z-index: 1
+                top: 0
+                bottom: 0
+                display: grid
+                grid-template-columns: repeat(4, auto)
+                grid-gap: 16px
+                width: auto
+                @include small()
+                    order: 1
+                    padding: 32px 0 38px 0
+                &-bullet
+                    outline: 3px solid $primary_color
+                    outline-offset: 3px
+                    background: transparent
+                &-bullet-active
+                    background: $primary_color
