@@ -54,8 +54,8 @@
                             margin: 0 auto
                             display: block
                             height: 100%
-                        @include small()
-                            padding: 0 60px
+                        // @include small()
+                        //     padding: 0 40px
                         &__heading
                             font-size: $primary_font_size + 32
                             font-family: $primary_font_family
@@ -71,7 +71,7 @@
                                 font-family: $primary_font_family
                                 font-weight: $primary_font_weight 
                                 line-height: $primary_line_height + 16
-                                white-space: nowrap
+                                // white-space: nowrap
 
                             &::after
                                 position: absolute
@@ -80,14 +80,14 @@
                                 height: 2px
                                 background: $primary_color
                                 left: 0
-                                top: 104%
+                                bottom: -8%
                                 @include medium()
                                     left: 50%
                                     transform: translateX(-50%)
-                                    top: 90px
+                                    bottom: -45%
                                 @include small()
-                                    top: 50px
-                                    width: 53%
+                                    // top: 50px
+                                    // width: 53%
                         
                         &__para
                             font-family: $tertiary_font_family

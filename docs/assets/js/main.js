@@ -29,7 +29,10 @@ const minus_button_2 = document.querySelector(".minus_2 svg")
 const counter_input_2 = document.querySelector(".input_2 input")
 const slider_category_list = document.querySelector(".second__container__wrapper__category__list")
 const slider_category_list_item = slider_category_list.getElementsByTagName("li")
+const sale_slider_category_list = document.querySelector(".third__container__wrapper__category__list")
+const sale_slider_category_list_item = sale_slider_category_list.getElementsByTagName("li")
 const active__line = document.querySelector(".second__container__wrapper__category__list .active__line")
+const sale__active__line = document.querySelector(".third__container__wrapper__category__list .sale__active__line")
 
 const searchOnSite = (e) =>{
     e.preventDefault()
@@ -156,6 +159,32 @@ for (let i = 0; i < slider_category_list_item.length; i++) {
             if (e.target && e.target.nodeName === "A") {
                 for (let k = 0; k < slider_category_list_item.length; k++) {
                     slider_category_list_item[k].children[0].classList.remove("active")
+                }
+                e.target.classList.add("active")
+            }
+        })
+    }
+}
+
+
+
+// Handling active item in sale slider category list //
+
+function saleCategoryRedLine(e) {
+    sale__active__line.style.left = e.offsetLeft + "px"
+    sale__active__line.style.width = e.offsetWidth + "px"
+}
+window.addEventListener("load", () => {
+    sale_slider_category_list_item[0].children[0].classList.add("active")
+    saleCategoryRedLine(sale_slider_category_list_item[0].children[0])
+});
+for (let i = 0; i < sale_slider_category_list_item.length; i++) {
+    for (let j = 0; j < sale_slider_category_list_item.length; j++) {
+        sale_slider_category_list_item[j].children[0].addEventListener("click", (e) => {
+            saleCategoryRedLine(e.target)
+            if (e.target && e.target.nodeName === "A") {
+                for (let k = 0; k < sale_slider_category_list_item.length; k++) {
+                    sale_slider_category_list_item[k].children[0].classList.remove("active")
                 }
                 e.target.classList.add("active")
             }

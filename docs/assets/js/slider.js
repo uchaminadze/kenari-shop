@@ -23,7 +23,7 @@ const imageSwiper = new Swiper(".slider", {
   })
 
 
-const productsSwiper = new Swiper(".swiper", {
+const topProductsSwiper = new Swiper(".swiper", {
     breakpoints: {
       1024: {
         slidesPerView: 4,
@@ -47,6 +47,35 @@ const productsSwiper = new Swiper(".swiper", {
     loop: true,
     pagination: {
       el: '.products__swiper__pagination',
+      clickable: "true",
+    },
+  })
+
+
+const saleProductsSwiper = new Swiper(".swiper-sale", {
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 24
+      },
+
+      700: {
+        slidesPerView: 2.7,
+        spaceBetween: 16
+      },
+
+      350: {
+        slidesPerView: 1.4,
+        spaceBetween: 10
+      }
+    },
+    navigation: {
+        nextEl: '.sale__slider__arrow__right',
+        prevEl: '.sale__slider__arrow__left'
+    },
+    loop: true,
+    pagination: {
+      el: '.sale__products__swiper__pagination',
       clickable: "true",
     },
   })

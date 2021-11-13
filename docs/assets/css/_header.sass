@@ -27,6 +27,10 @@ header
             position: absolute
             left: 50%
             transform: translateX(-50%)
+            @include medium()
+                width: 231px
+            @include small()
+                width: 166px
         .icons
             @include medium()
                 display: none

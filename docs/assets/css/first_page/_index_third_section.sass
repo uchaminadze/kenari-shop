@@ -3,10 +3,10 @@
 @import ../_media_queries
 
     
-.second__container
+.third__container
     width: 100%
-    padding: 133px 0 140px 0
-    background:#F6F6F6
+    padding: 80px 0
+    background: $primary_color
     @include medium()
         padding: 53px 0 64px 0
     @include small()
@@ -28,10 +28,12 @@
             @include small()
                 padding: 0 0 0 16px
             &__heading
-                font-family: $quaternary_font_family
+                font-family: $primary_font_family
                 font-size: $primary_font_size + 12
-                font-weight: $primary_font_weight + 200
+                font-weight: $primary_font_weight - 200
                 line-height: $primary_line_height + 16
+                color: white
+                text-transform: uppercase
             .category__list__wrapper
                 @include medium()
                     margin: 23px 0 50px 0
@@ -52,18 +54,18 @@
                     font-size: $primary_font_size
                     font-weight: $primary_font_weight
                     line-height: $primary_line_height
-                    color: #000
+                    color: white
                     opacity: .2
                     position: relative
                     white-space: nowrap
                     &.active
                         opacity: 1
                         
-                .active__line
+                .sale__active__line
                     position: absolute
                     width: 0
                     height: 2px
-                    background: $primary_color
+                    background: white
                     left: 0
                     bottom: -8px
                     transition: .5s
@@ -71,16 +73,17 @@
                                     
                                 
 
-        .swiper-container
+        .sale__swiper__container
             position: relative
             @include medium()
                 padding: 0 0 0 40px
             @include small()
                 padding: 0 0 0 16px
-            .swiper
+            .sale__swiper
                 width: 100%
                 margin: 106px 0 46px 0
                 position: unset
+                overflow: hidden
                 @include medium()
                     margin: 50px 0 38px 0
                 @include small()
@@ -144,11 +147,14 @@
                                         font-weight: $primary_font_weight + 200
                                     
                                 
-            .slider__arrow
+            .sale__slider__arrow
                 position: absolute
                 &__left,
                 &__right
                     cursor: pointer
+                    svg
+                        path
+                            stroke: white
                     @include medium()
                         display: none
                 &__left
@@ -181,9 +187,9 @@
                 padding: 0 40px
             &__button
                 padding: 16px 32px
-                background: $primary_color
-                border: $primary_color
-                color: white
+                background: white
+                border: white
+                color: black
                 font-family: $primary_font_family
                 font-size: $primary_font_size
                 font-weight: $primary_font_weight
@@ -203,8 +209,8 @@
                     order: 1
                     padding: 32px 0 38px 0
                 &-bullet
-                    outline: 3px solid $primary_color
+                    outline: 3px solid white
                     outline-offset: 3px
                     background: transparent
                 &-bullet-active
-                    background: $primary_color
+                    background: white
