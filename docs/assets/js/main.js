@@ -33,6 +33,8 @@ const sale_slider_category_list = document.querySelector(".third__container__wra
 const sale_slider_category_list_item = sale_slider_category_list.getElementsByTagName("li")
 const active__line = document.querySelector(".second__container__wrapper__category__list .active__line")
 const sale__active__line = document.querySelector(".third__container__wrapper__category__list .sale__active__line")
+const background__images = document.querySelector(".fourth__container__wrapper__images")
+
 
 const searchOnSite = (e) =>{
     e.preventDefault()
@@ -190,6 +192,19 @@ for (let i = 0; i < sale_slider_category_list_item.length; i++) {
             }
         })
     }
+}
+
+
+
+for(let i = 0; i < background__images.children.length; i++){
+    background__images.children[i].addEventListener("mouseover", () =>{
+        background__images.children[i].classList.add("toggle")
+        background__images.children[i].children[0].classList.add("toggle")
+    })
+    background__images.children[i].addEventListener("mouseout", () =>{
+        background__images.children[i].classList.remove("toggle")
+        background__images.children[i].children[0].classList.remove("toggle")
+    })
 }
 
 

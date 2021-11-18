@@ -1,0 +1,133 @@
+@import ../abstracts/_colors
+@import ../abstracts/_fonts
+@import ../_media_queries
+    
+    
+    
+    
+.fourth__container
+    width: 100%
+    padding: 110px 0 109px 0
+    @include medium()
+        padding: 64px 0 63px 0
+    &__wrapper
+        max-width: 1408px
+        padding: 0 50px
+        width: 100%
+        margin: 0 auto
+        @include medium()
+            padding: 0 40px
+        @include small()
+            padding: 0
+        .fourth__container__swiper
+            width: 100%
+            overflow: hidden
+        &__images
+            display: grid
+            grid-template-columns: repeat(3, auto)
+            width: 100%
+            @include small()
+                padding: 0 0 0 16px
+            &__sun__glasses
+                background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../img/sun-glasses-img.jpg)
+                &.toggle
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/sun-glasses-img.jpg)
+            &__optic__glasses
+                background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../img/optics-img.jpg)
+                &.toggle
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/optics-img.jpg)
+            &__contact__lenses
+                background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(../img/lenses-img.jpg)
+                &.toggle
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/lenses-img.jpg)
+            &__sun__glasses,
+            &__optic__glasses,
+            &__contact__lenses,
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                object-fit: cover
+                width: 100%
+                padding-bottom: 135.5%
+                position: relative
+                overflow: hidden
+                outline: 1px solid white
+                outline-offset: -8px
+                @include small()
+                    padding-bottom: 115.5%
+                    
+                .img__overlay
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    display: grid
+                    grid-gap: 48px
+                    justify-content: center
+                    transform: translateY(50%)
+                    transition: 300ms transform ease-out
+                    &.toggle
+                        transform: translateY(-50%)
+                        grid-gap: 16px
+                        @include medium()
+                            transform: translateY(-30%)
+                            
+                    p
+                        font-family: $primary_font_family
+                        font-size: $primary_font_size + 8
+                        text-align: center
+                        font-weight: $primary_font_weight
+                        line-height: $primary_line_height + 11
+                        color: white
+                        @include medium()
+                            font-size: $primary_font_size
+                        @include small()
+                            font-size: $primary_font_size + 2
+                            line-height: $primary_line_height + 3
+
+                    button
+                        background: transparent
+                        border: 2px solid white
+                        color: white
+                        font-family: $primary_font_family
+                        font-size: $primary_font_size
+                        font-weight: $primary_font_weight
+                        line-height: $primary_line_height
+                        width: 150px
+                        height: 51px
+                        margin: 0 auto
+
+
+        .images__logos__separator
+            margin: 151px 0 100px 0
+            border: 1px solid #D5D5D5
+            @include medium()
+                margin: 64px 0
+            @include small()
+                margin: 64px 16px
+
+
+        &__logos
+            max-width: 1308px
+            width: 100%
+            display: grid
+            grid-gap: 64px
+            @include medium()
+                grid-gap: 33px
+            @include small()
+                padding: 0 16px
+                grid-gap: 16px
+            &__top__line,
+            &__bottom__line
+                display: flex
+                width: 100%
+                // grid-template-columns: repeat(5, auto)
+                justify-content: space-between
+                // grid-gap: 125px
+                // align-items: center
+                img
+                    width: 8%
+                    height: auto
+            &__bottom__line
+                // direction: rtl

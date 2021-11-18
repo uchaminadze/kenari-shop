@@ -1380,6 +1380,247 @@ header .show_block_container {
   background: white;
 }
 
+.fourth__container {
+  width: 100%;
+  padding: 110px 0 109px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container {
+    padding: 64px 0 63px 0;
+  }
+}
+
+.fourth__container__wrapper {
+  max-width: 1408px;
+  padding: 0 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container__wrapper {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper {
+    padding: 0;
+  }
+}
+
+.fourth__container__wrapper .fourth__container__swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.fourth__container__wrapper__images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper__images {
+    padding: 0 0 0 16px;
+  }
+}
+
+.fourth__container__wrapper__images__sun__glasses {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(black)), url(../img/sun-glasses-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), black), url(../img/sun-glasses-img.jpg);
+}
+
+.fourth__container__wrapper__images__sun__glasses.toggle {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../img/sun-glasses-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/sun-glasses-img.jpg);
+}
+
+.fourth__container__wrapper__images__optic__glasses {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(black)), url(../img/optics-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), black), url(../img/optics-img.jpg);
+}
+
+.fourth__container__wrapper__images__optic__glasses.toggle {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../img/optics-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/optics-img.jpg);
+}
+
+.fourth__container__wrapper__images__contact__lenses {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(black)), url(../img/lenses-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), black), url(../img/lenses-img.jpg);
+}
+
+.fourth__container__wrapper__images__contact__lenses.toggle {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url(../img/lenses-img.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(../img/lenses-img.jpg);
+}
+
+.fourth__container__wrapper__images__sun__glasses, .fourth__container__wrapper__images__optic__glasses, .fourth__container__wrapper__images__contact__lenses {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  padding-bottom: 135.5%;
+  position: relative;
+  overflow: hidden;
+  outline: 1px solid white;
+  outline-offset: -8px;
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper__images__sun__glasses, .fourth__container__wrapper__images__optic__glasses, .fourth__container__wrapper__images__contact__lenses {
+    padding-bottom: 115.5%;
+  }
+}
+
+.fourth__container__wrapper__images__sun__glasses .img__overlay, .fourth__container__wrapper__images__optic__glasses .img__overlay, .fourth__container__wrapper__images__contact__lenses .img__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+  transition: 300ms transform ease-out, 300ms -webkit-transform ease-out;
+}
+
+.fourth__container__wrapper__images__sun__glasses .img__overlay.toggle, .fourth__container__wrapper__images__optic__glasses .img__overlay.toggle, .fourth__container__wrapper__images__contact__lenses .img__overlay.toggle {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  grid-gap: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container__wrapper__images__sun__glasses .img__overlay.toggle, .fourth__container__wrapper__images__optic__glasses .img__overlay.toggle, .fourth__container__wrapper__images__contact__lenses .img__overlay.toggle {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+}
+
+.fourth__container__wrapper__images__sun__glasses .img__overlay p, .fourth__container__wrapper__images__optic__glasses .img__overlay p, .fourth__container__wrapper__images__contact__lenses .img__overlay p {
+  font-family: sans-serif;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 32px;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container__wrapper__images__sun__glasses .img__overlay p, .fourth__container__wrapper__images__optic__glasses .img__overlay p, .fourth__container__wrapper__images__contact__lenses .img__overlay p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper__images__sun__glasses .img__overlay p, .fourth__container__wrapper__images__optic__glasses .img__overlay p, .fourth__container__wrapper__images__contact__lenses .img__overlay p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.fourth__container__wrapper__images__sun__glasses .img__overlay button, .fourth__container__wrapper__images__optic__glasses .img__overlay button, .fourth__container__wrapper__images__contact__lenses .img__overlay button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  width: 150px;
+  height: 51px;
+  margin: 0 auto;
+}
+
+.fourth__container__wrapper .images__logos__separator {
+  margin: 151px 0 100px 0;
+  border: 1px solid #D5D5D5;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container__wrapper .images__logos__separator {
+    margin: 64px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper .images__logos__separator {
+    margin: 64px 16px;
+  }
+}
+
+.fourth__container__wrapper__logos {
+  max-width: 1308px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 64px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fourth__container__wrapper__logos {
+    grid-gap: 33px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth__container__wrapper__logos {
+    padding: 0 16px;
+    grid-gap: 16px;
+  }
+}
+
+.fourth__container__wrapper__logos__top__line, .fourth__container__wrapper__logos__bottom__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fourth__container__wrapper__logos__top__line img, .fourth__container__wrapper__logos__bottom__line img {
+  width: 8%;
+  height: auto;
+}
+
+.fifth__container {
+  background: radial-gradient(rgba(0, 0, 0, 0), black), -webkit-gradient(linear, left top, left bottom, from(rgba(236, 49, 49, 0.3))), url(../img/background-img-2.jpg);
+  background: radial-gradient(rgba(0, 0, 0, 0), black), linear-gradient(rgba(236, 49, 49, 0.3)), url(../img/background-img-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 40.5%;
+  position: relative;
+}
+
+.fifth__container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: .3;
+  width: 50%;
+  height: auto;
+}
+
 .search_on_site {
   height: 66px;
   position: fixed;

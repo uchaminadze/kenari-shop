@@ -79,3 +79,20 @@ const saleProductsSwiper = new Swiper(".swiper-sale", {
       clickable: "true",
     },
   })
+
+
+
+const fourthContainerSwiper = new Swiper(".fourth__container__swiper", {
+  slidesPerView: 1.3,
+  spaceBetween: 17,
+  allowTouchMove: true,
+
+
+  breakpoints: {
+    701:{
+      slidesPerView: 3,
+      spaceBetween: 24,
+      allowTouchMove: true,
+    }
+  }
+})
